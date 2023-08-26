@@ -10,8 +10,21 @@ import { ChakraProvider } from '@chakra-ui/react'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
-      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
-      activeChain={NETWORK}
+      
+      activeChain={{
+        chainId: 25,
+        rpc: ["https://mainnet.cronoslabs.com/v1/55e37d8975113ae7a44603ef8ce460aa"],
+        nativeCurrency: {
+          decimals: 18,
+          name: "Cronos",
+          symbol: "CRO",
+        },
+        shortName: "CRO",
+        slug: "Cronos",
+        testnet: false,
+        chain: "Cronos Mainnet",
+        name: "Cronos Mainnet",
+      }}
     >
       {/* Progress bar when navigating between pages */}
       <NextNProgress
