@@ -8,13 +8,14 @@ export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data, isLoading } = useNFTs(contract);
+  const filtered_data = data?.filter((obj) => obj.owner !== "0x0000000000000000000000000000000000000000");
 
   return (
     <Container maxWidth="lg">
       <h1>Buy NFTs</h1>
       <p>Browse which NFTs are available from the collection.</p>
       <NFTGrid
-        data={data}
+        data={filtered_data}
         isLoading={isLoading}
         emptyText={
           "Looks like there are no NFTs in this collection. Did you import your contract on the thirdweb dashboard? https://thirdweb.com/dashboard"
@@ -23,3 +24,6 @@ export default function Buy() {
     </Container>
   );
 }
+
+
+

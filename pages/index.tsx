@@ -38,10 +38,10 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  Build NFT Marketplaces
+                  TIPSY DANCERs NFT
                 </span>
                 <br />
-                faster than ever.
+                exclusive NFT Marketplace
               </h1>
               <p className={styles.heroSubtitle}>
                 <Link
@@ -49,22 +49,26 @@ const Home: NextPage = () => {
                   href="https://thirdweb.com"
                   target="_blank"
                 >
-                  thirdweb
+                  LIQUOR TOKEN CRONOS
                 </Link>{" "}
-                gives you the tools you need to create audited, performant, and
-                flexible NFT marketplaces in <b>hours</b>, <i>not months</i>.
+                offers the opportunity to trade their Cronos Mainnet 
+                collection <b>Tipsy Dancers NFT</b> with <i>$Liquor</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
-                <Link className={styles.heroCta} href="/buy">
-                  Get Started
+                <Link 
+                  className={styles.heroCta}
+                  href="https://dancers.liquor-token-cronos.com/"
+                  target="_blank"
+                >   
+                  Mint a Tipsy Dancer with $Moonshine
                 </Link>
                 <Link
                   className={styles.secondaryCta}
-                  href="https://github.com/thirdweb-example/marketplace-v3"
+                  href="https://distillery.liquor-token-cronos.com/"
                   target="_blank"
                 >
-                  GitHub
+                  Earn $Moonshine
                 </Link>
               </div>
             </div>
