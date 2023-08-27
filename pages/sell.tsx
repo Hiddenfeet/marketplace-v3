@@ -22,7 +22,7 @@ export default function Sell() {
 
   return (
     <Container maxWidth="lg">
-      <h1>Sell Tipsy Dancers NFTs</h1>
+      <h1>Tipsy Dancers</h1> {/* Replaced the default header text */}
       {!selectedNft ? (
         <>
           <p>Select which NFT you&rsquo;d like to sell below.</p>
@@ -33,7 +33,7 @@ export default function Sell() {
               setSelectedNft(nft);
             }}
             emptyText={
-              "Looks like you don't own any NFTs in this collection. Head to the buy page to buy some!"
+              "Looks like you don't own any Tipsy Dancer. Head to the buy page to buy some!"
             }
           />
         </>

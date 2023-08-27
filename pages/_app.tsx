@@ -5,7 +5,8 @@ import NextNProgress from "nextjs-progressbar";
 import { NETWORK } from "../const/contractAddresses";
 import "../styles/globals.css";
 import * as React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,6 +27,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         name: "Cronos Mainnet",
       }}
     >
+      <Box as="header" textAlign="center" py="4" bg="white">
+        <Head>
+         <title>Liquor Token Cronos</title>
+        </Head>
+      </Box>
       {/* Progress bar when navigating between pages */}
       <NextNProgress
         color="var(--color-tertiary)"
@@ -39,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Navbar />
       {/* Render the actual component (page) */}
       <Component {...pageProps} />
+      
     </ThirdwebProvider>
   );
 }

@@ -7,7 +7,7 @@ export const NETWORK = Cronos;
 
 // 2. The address of the marketplace V3 smart contract.
 // Deploy your own: https://thirdweb.com/thirdweb.eth/MarketplaceV3
-export const MARKETPLACE_ADDRESS = "0xe88446468582aA5a7AC6ad2157EC658499e51190";
+export const MARKETPLACE_ADDRESS = "0x83FC09B9198468177Faaf3C66597326ba9344037";
 
 // 3. The address of your NFT collection smart contract.
 export const NFT_COLLECTION_ADDRESS =

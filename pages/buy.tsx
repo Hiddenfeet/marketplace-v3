@@ -12,7 +12,7 @@ export default function Buy() {
 
   return (
     <Container maxWidth="lg">
-      <h1>Buy NFTs</h1>
+      <h1>Tipsy Dancers</h1> {/* Replaced the header text */}
       <p>Browse which NFTs are available from the collection.</p>
       <NFTGrid
         data={filtered_data}

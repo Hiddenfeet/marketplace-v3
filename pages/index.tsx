@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  TIPSY DANCERs NFT
+                  Tipsy Dancers NFT
                 </span>
                 <br />
                 exclusive NFT Marketplace
@@ -46,13 +46,13 @@ const Home: NextPage = () => {
               <p className={styles.heroSubtitle}>
                 <Link
                   className={styles.link}
-                  href="https://thirdweb.com"
+                  href="https://liquor-token-cronos.com/"
                   target="_blank"
                 >
                   LIQUOR TOKEN CRONOS
                 </Link>{" "}
                 offers the opportunity to trade their Cronos Mainnet 
-                collection <b>Tipsy Dancers NFT</b> with <i>$Liquor</i>.
+                collection <b>Tipsy Dancers NFT</b> with <i>$CRO</i>.
               </p>
 
               <div className={styles.heroCtaContainer}>
