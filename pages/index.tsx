@@ -2,12 +2,38 @@ import type { NextPage } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { Cronos } from "@thirdweb-dev/chains";
+import { useChainId, useAddress, useSwitchChain } from "@thirdweb-dev/react";
+import { Container, Flex, Heading, Button } from "@chakra-ui/react";
 
-/**
- * Landing page with a simple gradient background and a hero asset.
- * Free to customize as you see fit.
- */
 const Home: NextPage = () => {
+  const address = useAddress();
+  const chainid = useChainId();
+  const switchChain = useSwitchChain();
+
+  if (!address) {
+    return (
+      <Container maxW={"1200px"}>
+        <Flex h={"100vh"} justifyContent={"center"} alignItems={"center"}>
+          <Heading>Please Connect a Wallet</Heading>
+        </Flex>
+      </Container>
+    );
+  }
+
+  if (chainid !== Cronos.chainId) {
+    return (
+      <Container maxW={"1200px"}>
+        <Flex h={"100vh"} justifyContent={"center"} alignItems={"center"}>
+          <Heading>Switch to Cronos Network</Heading>
+          <Button onClick={() => switchChain(Cronos.chainId)}>
+            Switch to Cronos
+          </Button>
+        </Flex>
+      </Container>
+    );
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.content}>
@@ -38,7 +64,7 @@ const Home: NextPage = () => {
             <div className={styles.heroBody}>
               <h1 className={styles.heroTitle}>
                 <span className={styles.heroTitleGradient}>
-                  Tipsy Dancers NFT
+                  TIPSY DANCERs 
                 </span>
                 <br />
                 exclusive NFT Marketplace
