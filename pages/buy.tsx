@@ -8,7 +8,7 @@ export default function Buy() {
   // Load all of the NFTs from the NFT Collection
   const { contract } = useContract(NFT_COLLECTION_ADDRESS);
   const { data, isLoading } = useNFTs(contract);
-  const filtered_data = data?.filter((obj) => obj.owner !== "0x0000000000000000000000000000000000000000");
+  const filtered_data = data?.filter((obj: { owner: string; }) => obj.owner !== "0x0000000000000000000000000000000000000000");
 
   return (
     <Container maxWidth="lg">
